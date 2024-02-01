@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function rev(n)
+            {
+                var sum=0;
+                for(var i=n;n>0;n=parseInt(n/10))
+                {
+                    var digit=n%10;
+                    sum=sum*10+digit;
+                }
+                console.log(sum);
+            }
+            rev(1234);
+        </script>
+    </body>
+</html>  

@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var count=0;
+            function prime(n){
+                for(var i=1;i<=n;i++)
+                {
+                    if(n%i===0)
+                    {
+                        count++;
+                    }
+                }
+                if(count===2)
+                {
+                    console.log("prime")
+                }
+                else{
+                    console.log("not a prime")
+                }
+            }
+            prime(5)
+        </script>
+    </body>
+</html>

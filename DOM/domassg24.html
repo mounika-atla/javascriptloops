@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body align="center">
+        <label>Firstname :</label>
+        <input type="text" onkeyup="xyz(event)"><br><br>       
+        <p id="d1">**The above field is mandatory</p>
+        <label>Middlename:</label>
+        <input type="text"><br><br>
+        <label>Lastname:</label>
+        <input type="text"><br><br>
+        <button onclick="abc()">Update</button>       
+    </body>
+    <script>
+        var x=document.getElementById("d1")
+        x.style.color="red";
+        x.style.display="block";
+        function xyz(e){
+            if(e.target.value.length=="")
+            {
+                x.style.display="block";
+            }
+            else{
+                x.style.display="none";
+            }
+
+        }
+
+    </script>
+</html>

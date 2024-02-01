@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <style>
+        div{
+            height: 100px;
+            width: 150px;
+            border: 2px solid;
+        }
+        </style>
+    <body>
+        <div id="d1"></div>
+        <button onclick="abc('red')">Red</button>
+        <button onclick="abc('green')">Green</button>
+        <button onclick="abc('blue')">Blue</button>
+        <button onclcik="abc('white')">Reset</button>
+        <script>
+            function abc(e){
+                var x=document.getElementById("d1")
+                x.style.backgroundColor=e;
+            }
+        </script>
+    </body>
+</html>

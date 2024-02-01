@@ -1,0 +1,12 @@
+<html>
+    <label>Date of birth:</label>
+    <input type="date" onchange="getAge(event)" id="d1">
+    <script>
+        function getAge(e){
+            var dob = new Date(e.target.value)
+            var today = new Date();
+            var currentAge = (today.getTime()-dob.getTime())/(1000*60*60*24*365);
+            document.write(currentAge);
+        }
+    </script>
+</html>

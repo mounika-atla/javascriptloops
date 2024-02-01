@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body align="center">
+        <h1 id="d1">Images using URL</h1>
+      <label id="d2">Enter image URL:</label><input type="text" id="i"><br><br>
+      <button onclick="abc()" id="d3">Add Image</button>
+      <div id="d4"></div>
+    </body>
+    <script>
+        var x=document.getElementById("d1");
+        var y=document.getElementById("d2");
+        var z=document.getElementById("d3");
+        x.style.color="red";
+        y.style.color="blue";
+        z.style.backgroundColor="orange";   
+        var arr=[];
+        let input=document.getElementById("i")
+        let div=document.getElementById("d4")
+        function abc(){
+            var img=document.createElement("img")
+            img.style.height="100px";
+            img.style.width="150px";
+            div.appendChild(img)
+            arr.push(input.value)
+            img.src=input.value;
+
+        }
+
+    </script>
+</html>

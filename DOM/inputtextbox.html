@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="decrement()">-</button>
+        <input type="text" id="d1">
+        <button onclick="increment()">+</button>
+        <script>
+            var x=document.getElementById("d1");
+            var i=0;
+            x.value=i;
+            function decrement(){
+                x.value=i--;
+                x.innerHTML=value;
+            }
+            function increment(){
+                x.value=i++;
+                x.innerHTML=value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+    <body>
+
+        <input type="text" id="searchBox" onkeyup="go(event)">
+        <script>
+            var tbody = document.getElementById('tb');
+            var searchBox = document.getElementById('searchBox');
+            var people= [
+                {
+                    "firstname":"praveen",
+                    "lastname":"gubbala",
+                    "age":36,
+                    "gender":"male",
+                    "city":"hyd",
+                    "salary":10000
+                },
+                {
+                    "firstname":"srikanth",
+                    "lastname":"gubbala",
+                    "age":32,
+                    "gender":"male",
+                    "city":"bengaluru",
+                    "salary":20000
+                },
+                {
+                    "firstname":"pradeep",
+                    "lastname":"reddy",
+                    "age":21,
+                    "gender":"male",
+                    "city":"hyd",
+                    "salary":25000
+                },
+                {
+                    "firstname":"mounika",
+                    "lastname":"mudiraju",
+                    "age":20,
+                    "gender":"female",
+                    "city":"nalgonda",
+                    "salary":30000
+                },
+                {
+                    "firstname":"nikhil",
+                    "lastname":"m",
+                    "age":22,
+                    "gender":"male",
+                    "city":"guntur",
+                    "salary":2000
+                },
+                {
+                    "firstname":"riya",
+                    "lastname":"bhadouria",
+                    "age":14,
+                    "gender":"female",
+                    "city":"indore",
+                    "salary":40000
+                }
+            ];
+
+            function go(e){
+                var arr=[];
+                people.forEach(function(person){
+                    var personvalues=Object.values(person);
+                    var pvas=personvalues.map(function(pvalue){
+                        return pvalue.toString();
+                    });
+                for(var i=0;i<=pvas.length-1;i++){
+                        if(pvas[i].startsWith(e.target.value))
+                        {
+                            arr.push(person);
+                            break;
+                        }
+                    }   
+                console.log(arr);
+                })
+        }
+        </script>
+    </body>
+</html>
+
+</html>

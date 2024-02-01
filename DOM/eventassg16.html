@@ -1,0 +1,24 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <img src='' alt="" onmouseover="change()" id="img">
+    <script>
+        var arr=["https://1.bp.blogspot.com/-eL4-qXzz-CE/UMoIH1D-b9I/AAAAAAAACog/gln5mrVqFD0/s1600/d722f2a14a84b7ad8053262f61a6106b_XL.jpg","https://tse1.mm.bing.net/th?id=OIP.eT2cMG8hPE7YfF_KsuVIvgHaIi&pid=Api&P=0&h=180","https://tse3.mm.bing.net/th?id=OIP.3yFjesef_hcxEcSwaFaBCAHaLH&pid=Api&P=0&h=180","https://tse4.mm.bing.net/th?id=OIP.JU4NjjWVdHQHaxl5J2hrIQHaGB&pid=Api&P=0&h=180","https://assets.entrepreneur.com/content/3x2/2000/twitter-co-founder-jack-dorsey-questioned.jpg"]
+        let i=0;
+        let img=document.getElementById("img")
+        img.src=arr[i]
+        function change(){
+            img.src=arr[i++]
+            if(i===arr.length){
+                i=0;
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

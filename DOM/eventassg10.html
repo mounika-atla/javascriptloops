@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <style>
+        div{
+            height:100px;
+            width:150px;
+            border:1px solid; 
+        }
+    </style>
+    <body>
+        <div id="d1"></div> 
+        <button onclick="abc()">toggle</button>
+    </body>
+    <script>
+        var x=document.getElementById("d1")
+        function abc(){
+            if(x.style.backgroundColor=="yellow")
+            {
+                x.style.backgroundColor="white";
+            }
+            else{
+                x.style.backgroundColor="yellow";
+            }
+        }
+    </script>
+
+</html>

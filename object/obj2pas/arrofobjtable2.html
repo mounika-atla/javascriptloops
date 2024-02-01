@@ -1,0 +1,58 @@
+<html>
+    <head></head>
+    <body>
+        <table id="tab"; border="1pxsolid";>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>city</th>
+                </tr>
+            <tr>
+                <td>mounika</td>
+                <td>22</td>
+                <td>female</td>
+                <td>hyderabad</td>
+            </tr>
+            <tr>
+                <td>chethana</td>
+                <td>20</td>
+                <td>female</td>
+                <td>chennai</td>
+            </tr>
+            <tr>
+                <td>madhu</td>
+                <td>30</td>
+                <td>female</td>
+                <td>banglore</td>
+            </tr>
+            <tr>
+                <td>chandu</td>
+                <td>23</td>
+                <td>male</td>
+                <td>chirala</td>
+            </tr>
+            </table>
+        <script>
+            var rt=document.createElement('tr');
+            headings.forEach(function(a){
+                var ht=document.createElement('th')
+                ht.innerHTML=a;
+                rt.appendChild(ht);
+            })
+            var tb=document.getElementById('tab')
+            tb.appendChild(rt);
+            people.forEach(function(x)
+            {
+                var tr=document.createElement("tr");
+                for(var k in a)
+                {
+                    var td=document.createElement("td");
+                    td.innerHTML=a[x];
+                    tr.appendChild(td);
+                }
+                tb.appendChild(tr);            
+            });
+        </script>
+    </body>
+</html>

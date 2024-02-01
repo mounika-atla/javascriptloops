@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var str=prompt();
+            min=0;
+            for(var i=0;i<=str.length-1;i--)
+            {
+                var k=str.split(str[i]).length-1;
+                if(k<min)
+                {
+                    min=k;
+                    var a=i;
+                }
+            }
+            console.log(str[a],min)
+
+        </script>
+    </body>
+</html>

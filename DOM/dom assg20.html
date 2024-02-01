@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h1>Add Contact Cards</h1>
+    <label for="">Name:</label><input type="text" id="name">
+    <br><br>
+    <label for="">Number:</label><input type="text" id="number">
+    <br><br>
+    <label for="">Gmail:</label><input type="email" id="mail">
+    <br><br>
+    <label for="">Enter URL:</label><input type="text" id="url">
+    <br><br>
+    <button onclick="addc()" id="con">Add Contacts</button>
+    <button id="up" onclick="udbtn()">Update</button>
+    <br>
+    <br>
+
+    <div id="d1"></div>
+    <script>
+        let addcontact=document.getElementById("con")
+        let nam = document.getElementById("name")
+        let number = document.getElementById("number")
+        let mail = document.getElementById("mail")
+        let url = document.getElementById("url")
+        let d1 = document.getElementById("d1")
+        let update=document.getElementById("up")
+        update.style.display="none"
+        
+        var arr = [];
+        function addc() {
+            let ob1 = {
+                "EnterURL": "",
+                "Name": "",
+                "Number": "",
+                "Gmail": ""
+
+            }
+            ob1.Name = nam.value;
+            ob1.Number = number.value;
+            ob1.Gmail = mail.value;
+            ob1.EnterURL = url.value
+            arr.push(ob1)
+            createcard(arr);
+        }
+        function createcard(y) {
+            d1.innerHTML = ''
+            y.forEach((a, b) => {
+                let cdiv = document.createElement("div")
+                d1.appendChild(cdiv)
+                cdiv.style.border = "5px dashed"
+                cdiv.style.backgroundColor = "yellow"
+                cdiv.style.width = "300px"
+                cdiv.style.marginBottom = "10px"
+                cdiv.style.position = "relative"
+
+                var delbtn = document.createElement('button');
+                delbtn.innerHTML = 'X';
+                cdiv.appendChild(delbtn);
+                delbtn.style.marginLeft = '265px'
+                delbtn.style.marginTop = '5px'
+                delbtn.style.display="block"
+                delbtn.onclick = function () {
+                    y.splice(b, 1);
+                    createcard(y);
+                }
+
+                var edtbtn = document.createElement("button")
+                edtbtn.innerHTML = "Edit"
+                cdiv.appendChild(edtbtn);
+                edtbtn.style.position = 'absolute'
+                edtbtn.style.left = '10px'
+                edtbtn.style.top = '5px'
+                edtbtn.onclick=function(){
+                    update.style.display="inline"
+                    addcontact.style.display="none"
+                    nam.value = a['Name'];
+                    number.value = a['Number'];
+                    mail.value = a['Gmail'];
+                    url.value = a['EnterURL'];
+
+                }
+
+                let idiv = document.createElement("div")
+                cdiv.appendChild(idiv)
+                let image = document.createElement('img')
+                image.src = a.EnterURL
+                idiv.appendChild(image)
+                image.style.height = "80px"
+                image.style.width = "80px"
+                image.style.borderRadius = "50%"
+
+
+                var key = Object.keys(a)
+                for (var i = 1; i < key.length; i++) {
+                    let xdiv = document.createElement("div");
+                    cdiv.appendChild(xdiv);
+                    xdiv.innerHTML = key[i] + ":" + a[key[i]]
+                }
+
+            })
+            function udbtn(){
+                
+            }
+            nam.value=''
+            number.value=""
+            mail.value=''
+            url.value=''
+        }
+    </script>
+</body>
+
+</html>

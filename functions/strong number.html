@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function strong(a)
+            {
+                var c=0;
+                for(i=a;i>0;i=parseInt(i/10))
+                {
+                    var k=1;
+                    for(var j=1;j<=i%10; j++)
+                    {
+                        k=k*j;
+                    }
+                    c=c+k;
+                }
+                if(c===a)
+                {
+                    return "strong";
+                }
+                else{
+                    return "not strong";
+                }
+            }
+                console.log(strong(132));
+        </script>
+    </body>
+</html>

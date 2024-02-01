@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var s=prompt("enter the string")
+            var max=0;
+            for(var i=0;i<=s.length-1;i++)
+            {
+                var k=s.split(s[i]).length-1;
+                if(k>max)
+                {
+                    max=k;
+                    var a=i;
+                }
+            }
+            console.log(s[a],max);
+        </script>
+    </body>
+</html>

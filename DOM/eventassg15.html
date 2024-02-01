@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body align="center">
+        <h1 id="d1" >Add Students</h1>
+        <input type="text" id="d3">
+        <button onclick="abc()" id="d2">Add Students</button>
+        <div id="d4"></div>
+    </body>
+    <script>
+        var x=document.getElementById("d1")
+        var y=document.getElementById("d2")
+        x.style.color="orange";
+        y.style.backgroundColor="blue";
+        var arr=[];
+        var input=document.getElementById("d3")
+        var div=document.getElementById("d4")
+        function abc(){
+            var stu=document.createElement("li")
+            stu.innerHTML="";
+            div.appendChild(stu)
+            arr.push(input.value)
+            stu.innerHTML=input.value;
+
+        }
+    </script>
+</html>

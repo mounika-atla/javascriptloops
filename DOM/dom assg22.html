@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 >Add Contact Cards with CURD operations,sorting and filtering</h1>
+        <label >Name:</label><input type="text" name="username" id="username"><br><br>
+        <label >Number:</label><input type="number" name="mno" id="mno"><br><br>
+        <label >Email:</label><input type="email" name="mail" id="mail"><br><br>
+        <label > Image :</label><input type="text" name="imgurl" id="imgurl"><br><br>
+        <button  onclick="abc()" type="button" style="color: black; background-color:blue;">Add Contact</button><br><br>
+        <label>search</label><input type="text">
+        <button onclick="abc()" ></button>
+    </center>
+    <div id="dd"></div>
+    <script> 
+        var ar = [];
+        var index=0;
+        var x = document.getElementById("dd")   
+        function abc(){
+            var ar1 = {};
+            var username = document.getElementById("username").value
+            var mno = document.getElementById("mno").value
+            var mail = document.getElementById("mail").value
+            var imgurl = document.getElementById("imgurl").value
+            ar1.username=username
+            ar1.mno=mno
+            ar1.mail=mail
+            ar1.imgurl=imgurl
+            ar[index]=ar1
+            var y = document.createElement("div")
+            y.style.width="200px"
+            y.style.height="250px"
+            y.style.border="1px solid"
+            y.style.fontSize="16px"
+            y.style.textAlign="center"
+            y.style.padding="10px"
+            y.style.overflowWrap="break-word"
+            var img = document.createElement("img")
+            img.setAttribute('src',ar[index].imgurl)
+            img.style.borderRadius="50%"
+            img.style.width="70px"
+            img.style.height="70px"
+            y.appendChild(img)
+            var uname = document.createElement("p")
+            uname.innerHTML="Name:"+ar[index].username
+            y.appendChild(uname)
+            var phno = document.createElement( "p")
+            phno.innerHTML="Number:"+ar[index].mno
+            y.appendChild(phno)
+            var mailid = document.createElement("p")
+            mailid.innerHTML="Email:"+ar[index].mail
+            y.appendChild(mailid)
+            x.appendChild(y)
+            index++;
+            x.appendChild(document.createElement("br"))
+           // ar.push(ar1)
+        }
+        //console.log(ar);
+        ar.sort(function(a,b){
+            if(a.username<b.mno)
+            {
+                return -1;
+            }
+            if(a.username>b.mno)
+            {
+                return 1;
+            }
+            return 0;
+        })
+        
+        </script>
+    
+</body>
+</html>

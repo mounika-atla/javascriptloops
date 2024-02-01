@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="d1"></ul>
+        <script>
+            var colors=["red","red","red","red"];
+            var list=document.getElementById("d1");
+
+            function createList(arr){
+                list.innerHTML="";
+                arr.array.forEach(function(color,index) {
+                    var litem=document.createElement('li');
+                    litem.innerHTML=color;
+                    var btn=document.createElement('button');
+                    btn.innerHTML="delete";
+                    btn.onclick=function(){
+                        ar[index]="blue";
+                        createList(ar);
+                    }
+                    litem.appendChild(btn);
+                    list.appendChild(litem);
+                    
+                });
+            }
+        </script>
+    </body>
+</html>

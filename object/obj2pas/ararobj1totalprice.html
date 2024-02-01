@@ -1,0 +1,60 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+             var products=[
+            {
+                "name":"duracell-AAA batteries(4-pack)",
+                "type":"hardgood",
+                "price":5.49,
+                "category":"household batteries",
+                "manufacturer":"duracell",
+            },
+            {
+                "name":"hard rock trackpak-mac",
+                "type":"software",
+                "price":29.99,
+                "category":"recording equipment",
+                "manufacturer":"hal leonard",
+            },
+            {
+                "name":"duracell-AA 1.5v coppertop batteries(4-pack)",
+                "type":"hardgood",
+                "price":5.62,
+                "category":"household batteries",
+                "manufacturer":"duracell",
+            },
+            {
+                "name":"engineer-MAX batteries AA(4-pack)",
+                "type":"hardgood",
+                "price":5.32,
+                "category":"household batteries",
+                "manufacturer":"engineer",
+            },
+            {
+                "name":"METRA-antenna cable adapter-black",
+                "type":"hardgood",
+                "price":13.99,
+                "category":"antennas & adapters",
+                "manufacturer":"metra",
+            },
+            {
+                "name":"wipedrive six-mac|windows",
+                "type":"software",
+                "price":23.99,
+                "category":"maintenance software",
+                "manufacturer":"white canyon",
+            }
+        ];    
+             var total=0;
+            for(var x in products)
+            {
+                if(products[x].type=="hardgood")
+                {
+                 total=total+(products[x].price);
+                }
+            }
+            console.log(total)
+
+        </script>
+    </body>

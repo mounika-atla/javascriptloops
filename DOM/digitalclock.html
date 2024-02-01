@@ -1,0 +1,13 @@
+<html>
+    <head></head>
+    <body>
+<h1 id='d1'></h1>
+<script>            
+	setInterval(function(){
+		var d = new Date();
+		var clocktime = document.getElementById('d1');
+		clocktime.innerHTML = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds();
+	},100);
+</script>
+</body>
+</html>

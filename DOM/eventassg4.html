@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <style>
+        div{
+            height:100px;
+            width:100px;
+            border:1px solid;
+        }
+
+    </style>
+    <body>
+        <div id="'d1" onclick="abc(event)"></div>
+    </body>
+    <script>
+        var color=['blue','orange','pink','black','yellow','white']
+        var i=0;
+        var x=document.getElementById('d1')
+        x.style.backgroundColor=color[i];
+        function abc(e){
+            i++;
+            e.target.style.backgroundColor=color[i];
+            if(i==color.length)
+            {
+                i=0;
+            }
+        }
+
+    </script>
+</html>

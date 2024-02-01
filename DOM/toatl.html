@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="inp1" onkeyup="enter(event)">
+        <button onclick="dec()">dec-</button>
+        <input type="text" id="inp2">
+        <button onclick="inc()">inc+</button>
+        <h2>total: <span id="span"></span></h2>
+        <script>
+            var input1=document.getElementById('inp1');
+            var input2=document.getElementById('inp2');
+            var span=document.getElementById('span')
+             
+            var i=1;
+            input2.value=i;
+            function dec(){
+                input2.value=--i;
+                span.innerHTML=(input1.value*input2.value)
+            }
+            function inc(){
+                input2.value=++i;
+                span.innerHTML=(input1.value*input2.value)
+            }
+            function enter(){
+                span.innerHTML=(input1.value*input2.value)
+            }
+        </script>
+    </body>
+</html>

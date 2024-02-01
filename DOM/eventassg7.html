@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <style>
+        div{
+            height:100px;
+            width:150px;
+            border:1px solid;
+        }
+    </style>
+    <body>
+        <div id='d1'> i am nothing</div>
+        <button onclick="abc()">TRUE/FALSE</button>
+    </body>
+    <script>
+        var x=document.getElementById('d1')
+         function abc(){
+            if(x.innerHTML==='true')
+            {
+                x.innerHTML='false'
+            }
+            else{
+                x.innerHTML='true'
+            }
+         }
+
+    </script>
+</html>

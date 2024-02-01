@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h1>change button background color on click</h1>
+    <button onclick="abc(event)" id="btn">white</button>
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    function abc(){
+       if(btn.innerHTML === 'white'){
+        btn.innerHTML = 'green';
+        btn.style.backgroundColor = 'green';
+        btn.style.color = 'white';
+
+       }
+       else{
+        btn.innerHTML = 'white';
+        btn.style.backgroundColor = 'white'
+        btn.style.color = 'black';
+       }
+    }
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var x=+prompt();
+            var y=+prompt();
+            var max;
+            var min;
+            if(x>y)
+            {
+                max=x;
+                min=y;
+            }
+            else
+            {
+                max=y;
+                min=x; 
+            }
+            var i=max;
+            while(max%min!==0)
+            {
+                max=max+i;
+            }
+            console.log(max);
+        </script>
+    </body>
+</html>

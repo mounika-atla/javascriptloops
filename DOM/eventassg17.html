@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Image carousel</h1>
+        <button onclick="abc()" >previous</button>
+        <img src="" id="d3">
+        <button onclick="abc()">Next</button>
+    </body>
+    <script>
+        var arr=["https://wallpapercave.com/wp/wp2907361.jpg","https://tse3.mm.bing.net/th?id=OIP.pyusgzEnkrYFbhU2jSdQAwHaJC&pid=Api&P=0&h=180","https://tse4.mm.bing.net/th?id=OIP.dBqxB6jB5UyKsBVAHx3RDAHaH5&pid=Api&P=0&h=180","http://img1.wikia.nocookie.net/__cb20130512001211/disney/images/0/07/02nd_princess.jpg"]
+        var i=0;
+        var img=document.getElementById("d3");
+        img.style.height="200px";
+        img.style.width="200px";
+        img.src=arr[i];
+        function abc(){               
+                img.src=arr[i++];
+                if(i==arr.length)
+                {
+                    i=0;
+                }
+                img.src=arr[i];
+
+        }
+    </script>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var arr=[1,2,3,4,5];
+            arr.forEach(function(a,i)
+            {
+                var btn=document.createElement("button");
+                btn.innerHTML="delete";
+                btn.onclick=function(){
+                    arr.splice(i,1);
+                }
+                alert(i);
+            })
+        </script>
+    </body>
+</html>

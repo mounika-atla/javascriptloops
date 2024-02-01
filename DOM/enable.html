@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>How to enable or disable input using JavaScript</title>
+</head>
+
+<body>
+
+<form id="registration-form">
+Enter your name: <input type="text" id="name">
+</form>
+
+<button onclick="disable()">Disable the text field</button>
+
+<script>
+function disable() {
+document.getElementById("name").disabled = true;
+}
+function enable() {
+document.getElementById("name").disabled = false;
+}
+</script>
+
+</body>
+</html>

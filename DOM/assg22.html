@@ -1,0 +1,42 @@
+<html>
+    <head></head>
+    <title> CRUD operations</title>
+    <style>
+        br{
+            width: 100px;
+        }
+    </style>
+    <body id="bd">
+        <h1>Add contacts cards with CRUD operations,sorting and filtering</h1>
+        <label>Name:</label>
+        <input type="text" id="fName"></br></br>
+        <label>Number:</label>
+        <input type="text" id="num"></br></br>
+        <label>Email:</label>
+        <input type="text" id="mail"></br></br>
+        <label>Image:</label>
+        <button onclick="abc(event)" >choose file</button></br></br>
+        <button onclick="xyz(event)" style="background-color: blue;">Add contact</button>
+        <script>
+        var br=[];
+        function xyz(event){
+            var obj={};
+        obj.name=document.getElementById('fName').value;
+         var h=document.createElement('h3')
+         h.innerHTML=obj.name;
+         document.getElementById('bd').appendChild(h)
+         obj.number=document.getElementById('num').value; 
+         var x=document.createElement('h4')
+         x.innerHTML=obj.number;
+         document.getElementById('bd').appendChild(x)
+         obj.email= document.getElementById('mail').value;
+         var y=document.createElement('h3')
+         y.innerHTML=obj.email;
+         document.getElementById('bd').appendChild(y)
+         obj.push(br);
+
+
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <button  onclick="increment()">+</button>
+        <span id="d1">0</span>
+        <button onclick="decrement()">-</button>
+    <script>
+        var  value=0;
+        var x=document.getElementById("d1");
+        function increment(){
+            value++;
+            x.innerHTML=value;
+        }
+        function decrement(){
+            value--;
+            x.innerHTML=value;
+        }
+        
+    </script>
+</html>

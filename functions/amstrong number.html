@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function arm(n)
+            {
+            var sum=0;
+            var strnum=n.toString();
+            var len=strnum.length;
+            for(var i=0;i<=len-1;i++)
+            {
+                var digit=parseInt(strnum[i]);
+                sum=sum+digit**len;
+            }
+            if(sum===n)
+            {
+                console.log("arm");
+            }
+            else{
+                console.log("not a arm ");
+            }
+        }
+            console.log(arm(123));
+        </script>
+    </body>
+</html>
